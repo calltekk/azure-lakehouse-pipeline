@@ -101,3 +101,13 @@ What you *can* run locally:
 - Unit tests:
   ```bash
   pytest
+
+
+## Scala Spark Job
+
+`spark-scala/` contains a minimal Scala Spark job used to build a Gold mart from Silver events.
+
+- Input: Silver Delta path (typed/cleaned events)
+- Output: Gold Delta mart `fct_purchases_daily_scala`
+
+This module is intended to run on a Spark cluster (Databricks/Synapse/etc.). Spark is marked as `provided` in `build.sbt`.
