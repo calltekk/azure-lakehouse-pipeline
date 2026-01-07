@@ -49,18 +49,19 @@ Config & Secrets | Environment variables / Key Vault (conceptual)
 
 ## Repository Structure
 
+```text
 .
-├── dags/ # Airflow DAG definitions
-├── spark/ # Spark jobs (bronze / silver / gold)
-├── kafka/ # Kafka/Event Hubs producer + schemas
-├── postgres/ # Serving-layer DDL and loaders
-├── config/ # Example configuration (no secrets)
-├── docs/ # Architecture & runbook
-├── tests/ # Contract and unit tests
-└── scripts/ # Local helper utilities
+├── dags/                  # Airflow DAG definitions
+├── spark/                 # Spark jobs (bronze / silver / gold)
+├── spark-scala/           # Scala Spark jobs
+├── kafka/                 # Kafka/Event Hubs producer + schemas
+├── postgres/              # Serving-layer DDL and loaders
+├── config/                # Example configuration (no secrets)
+├── docs/                  # Architecture & runbook
+├── tests/                 # Contract and unit tests
+└── scripts/               # Local helper utilities
+```
 
-
----
 
 ## What This Project Is (and Is Not)
 
