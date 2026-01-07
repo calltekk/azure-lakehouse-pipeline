@@ -1,0 +1,25 @@
+project:
+  name: pipeline01
+  timezone: UTC
+
+kafka:
+  bootstrap_servers: "YOUR_EVENTHUB_NAMESPACE.servicebus.windows.net:9093"
+  topic: "events"
+  security_protocol: "SASL_SSL"
+  sasl_mechanism: "PLAIN"
+  # DO NOT COMMIT REAL CREDS
+  sasl_username: "$ConnectionString"
+  sasl_password_env: "EVENTHUB_CONNECTION_STRING"
+
+storage:
+  bronze_path: "abfss://bronze@youradls.dfs.core.windows.net/events/"
+  silver_path: "abfss://silver@youradls.dfs.core.windows.net/events/"
+  gold_path: "abfss://gold@youradls.dfs.core.windows.net/marts/"
+
+postgres:
+  host: "your-postgres.postgres.database.azure.com"
+  port: 5432
+  database: "analytics"
+  user: "readonly_or_loader_user"
+  password_env: "POSTGRES_PASSWORD"
+  sslmode: "require"

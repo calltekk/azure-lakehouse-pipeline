@@ -1,0 +1,26 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+*.log
+data/
+*.parquet
+*.csv
+*.jsonl
+.DS_Store
+.vscode/
+
+# Spark
+spark-warehouse/
+metastore_db/
+derby.log
+
+# Airflow
+airflow.db
+airflow-webserver.pid
+logs/
+
+# Local Secrets
+config/*.yml
+!config/config.example.yml
